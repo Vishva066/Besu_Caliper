@@ -1,0 +1,16 @@
+test: 
+  name: Besu Private network testing.
+  description: Test done using Userdetails contract.
+  workers:
+    number: 1
+  rounds:
+    - label: Read Transaction
+      description: Read transactions from the smart contract.
+      txDuration: 20
+      rateControl:
+        type: fixed-load
+        opts: 
+          transactionLoad: 2
+      workload:
+          module: Workload/readtxn.js
+

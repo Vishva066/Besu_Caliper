@@ -1,0 +1,77 @@
+{
+    "caliper": {
+        "blockchain": "ethereum"
+    },
+    "ethereum": {
+        "url": "ws://localhost:8546",
+        "contractDeployerAddress": "0xfe3b557e8fb62b89f4916b721be55ceb828dbd73",
+        "contractDeployerAddressPrivateKey": "8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63",
+        "contractDeployerAddressPassword": "",
+        "fromAddress": "0xfe3b557e8fb62b89f4916b721be55ceb828dbd73",
+        "fromAddressPassword": "",
+        "transactionConfirmationBlocks": 12,
+        "contracts": {
+            "uDetails": {
+                "path": "../userdetails.json",
+                "abi": [
+                    {
+                        "inputs": [],
+                        "name": "getAge",
+                        "outputs": [
+                            {
+                                "internalType": "uint256",
+                                "name": "",
+                                "type": "uint256"
+                            }
+                        ],
+                        "stateMutability": "view",
+                        "type": "function"
+                    },
+                    {
+                        "inputs": [],
+                        "name": "getName",
+                        "outputs": [
+                            {
+                                "internalType": "string",
+                                "name": "",
+                                "type": "string"
+                            }
+                        ],
+                        "stateMutability": "view",
+                        "type": "function"
+                    },
+                    {
+                        "inputs": [
+                            {
+                                "internalType": "uint256",
+                                "name": "newAge",
+                                "type": "uint256"
+                            }
+                        ],
+                        "name": "setAge",
+                        "outputs": [],
+                        "stateMutability": "nonpayable",
+                        "type": "function"
+                    },
+                    {
+                        "inputs": [
+                            {
+                                "internalType": "string",
+                                "name": "newName",
+                                "type": "string"
+                            }
+                        ],
+                        "name": "setName",
+                        "outputs": [],
+                        "stateMutability": "nonpayable",
+                        "type": "function"
+                    }
+                ],
+                "gas": {
+                    "setAge": 1000000000,
+                    "getAge": 70000000000
+                }
+            }
+        }
+    }
+}
